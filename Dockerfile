@@ -7,4 +7,5 @@ ENV TYPESENSE_THREAD_POOL_SIZE=1
 ENV TYPESENSE_NUM_COLLECTIONS_PARALLEL_LOAD=1
 
 VOLUME data
-CMD /opt/typesense-server
+CMD echo Port=$PORT
+CMD /opt/typesense-server --api-port=$PORT
